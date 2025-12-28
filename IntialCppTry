@@ -1,0 +1,39 @@
+/*
+Current work still a work in progress
+*/
+
+
+class Solution {
+public:
+    vector<string> findWords(vector<string>& words) {
+        string output=
+        unordered_map<char,int> rowOne{ 
+        {'q', 1}, {'w', 1}, {'e', 1}, {'r', 1}, {'t', 1},
+        {'y', 1}, {'u', 1}, {'i', 1}, {'o', 1}, {'p', 1}
+        };
+        unordered_map<char,int> rowTwo{ 
+        {'a', 2}, {'s', 2}, {'d', 2}, {'f', 2}, {'g', 2},
+        {'h', 2}, {'j', 2}, {'k', 2}, {'l', 2}
+        };
+        unordered_map<char,int> rowThree{ 
+        {'z', 3}, {'x', 3}, {'c', 3}, {'v', 3}, {'b', 3},
+        {'n', 3}, {'m', 3}
+        };
+        short currRow=0;
+        bool sameR = 1;
+        for(int i=0; i< words.size(); i++){
+            currRow = words[i][0];
+            for(int j=1; j< words[i].size(); j++){
+                if(currRow!=words[i][j]){
+                    sameR=0;
+                    break;
+                }
+            }
+            //if sameRow is still true word is all same row and add it to output
+            if(sameR=1){
+
+            }
+            sameR=1;
+        }
+    }
+};
